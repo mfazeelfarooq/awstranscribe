@@ -1,1 +1,1 @@
-web: gunicorn nlpcourseproject.wsgi --log-file -
+web: gunicorn nlpcourseproject.wsgi:application --bind 0.0.0.0:$PORT --workers 3 --log-level info --timeout 120
